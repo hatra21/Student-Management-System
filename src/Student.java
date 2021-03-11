@@ -9,6 +9,7 @@ public class Student {
     private int tuition;
     private static int costPerCourse = 325;
     private static int id = 1000;
+    private float grade = 100;
 
     public Student() {
         Scanner input = new Scanner(System.in);
@@ -76,5 +77,25 @@ public class Student {
                 "\nAmount owe: $" + tuition);
 
         System.out.println();
+    }
+
+    public float getGrade() {
+        return grade;
+    }
+
+    public void setGrade(float grade) {
+        this.grade = grade;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getStudentID() {
+        return studentID;
+    }
+
+    public void showGrade() {
+        System.out.println(this.lastName + " " + this.getStudentID() + " grade: " + this.getGrade());
     }
 }
